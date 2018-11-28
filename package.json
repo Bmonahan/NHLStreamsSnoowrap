@@ -1,0 +1,22 @@
+{
+  "name": "nhlstreamssnoowrap",
+  "version": "1.0.0",
+  "description": "Using Nodejs and Snoowrap to grab links from r/nhlstreams",
+  "main": "app.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bmonahan/NHLStreamsSnoowrap.git"
+  },
+  "author": "Brysen Monahan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bmonahan/NHLStreamsSnoowrap/issues"
+  },
+  "homepage": "https://github.com/Bmonahan/NHLStreamsSnoowrap#readme",
+  "dependencies": {
+    "snoowrap": "^1.15.2"
+  }
+}
