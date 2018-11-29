@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Bmonahan/NHLStreamsSnoowrap#readme",
   "dependencies": {
+    "node": "^11.2.0",
     "snoowrap": "^1.15.2"
   }
 }
