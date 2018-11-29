@@ -13,7 +13,7 @@ const r = new snoowrap({
 var data = {};
 var games = [];
 data.games = games;
-getPosts();
+//getPosts();
 var gameId = [];
 
 async function getPosts(){
@@ -21,15 +21,17 @@ async function getPosts(){
     query: 'Game Thread',
     subreddit: 'nhlstreams',
     sort: 'new',
-    time: 'day'
+    time: 'year'
   };
-  var post = await r.search(params).then((val)=>{
+  await r.search(params).then((val)=>{
     if(typeof(val[0])==='undefined'){
       console.log("Nothing new.");
     }else{
       for(let i = 0;i<val.length;i++){
         let title  = val[i].title;
         let id = val[i].id;
+        gameId.push(id);
+        //console.log('added');
         if(title.includes("Game Thread")){
           console.log(`Title: ${title}, ID: ${id}`);
         }
@@ -40,14 +42,17 @@ async function getPosts(){
         }
         data.games.push(game);
       }
-      console.log(JSON.stringify(data));
+      //console.log(JSON.stringify(data));
       var json  = JSON.stringify(data);
-      fs.writeFile('data.json', json, 'utf8', ()=>{
-        console.log("done");
-      });
+      // fs.writeFile('data.json', json, 'utf8', ()=>{
+      //   console.log("done");
+      // });
     }
+    return json;
   });
 }
+
+getPosts().then(console.log)
 
 
 

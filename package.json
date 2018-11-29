@@ -4,7 +4,7 @@
   "description": "Using Nodejs and Snoowrap to grab links from r/nhlstreams",
   "main": "app.js",
   "scripts": {
-    "test": "run"
+    "test": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Bmonahan/NHLStreamsSnoowrap#readme",
   "dependencies": {
+    "jquery": "^3.3.1",
     "node": "^11.2.0",
     "snoowrap": "^1.15.2"
   }
